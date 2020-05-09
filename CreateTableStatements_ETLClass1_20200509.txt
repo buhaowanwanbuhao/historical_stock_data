@@ -1,0 +1,27 @@
+
+Create Table hist_stock_prices (
+ticker VARCHAR(255) NOT NULL,
+open FLOAT NOT NULL,
+close FLOAT NOT NULL,
+adj_close FLOAT NOT NULL,
+low FLOAT NOT NULL,
+high FLOAT NOT NULL,
+volume FLOAT NOT NULL,
+date DATE NOT NULL
+) ;
+
+
+Create Table stock_indust_sector (
+ticker VARCHAR(255) PRIMARY KEY,
+exchange VARCHAR(255) NOT NULL,
+name VARCHAR (255) NOT NULL,
+sector VARCHAR (255) NOT NULL,
+industry VARCHAR (255) NOT NULL
+) ;
+
+
+Create Table stock_scrape_data (
+ticker VARCHAR(255) PRIMARY KEY,
+current_price FLOAT NOT NULL,
+date DATE NOT NULL
+) ;
