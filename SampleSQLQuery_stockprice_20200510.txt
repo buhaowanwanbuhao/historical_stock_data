@@ -1,0 +1,13 @@
+-- sample query that goes across all 3 tables 
+select scr.ticker,
+       scr.current_price,
+	   scr.date,
+       hist.close,
+	   sti.firm_name,
+	   sti.industry,
+	   sti.sector
+from stock_scrape_data scr
+Inner Join hist_stock_prices hist ON scr.ticker = hist.ticker
+Inner Join stock_indust_sector sti ON scr.ticker = sti.ticker
+where scr. ticker = 'GM' 
+AND (hist.date Between '2018-01-01' AND '2018-01-10' );
